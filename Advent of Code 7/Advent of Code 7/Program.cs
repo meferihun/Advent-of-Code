@@ -29,11 +29,6 @@ class Program
 
         Dictionary<string, long> cardPoints = AssignRanks(cardBids.Keys.ToList());
 
-        foreach (var card in cardPoints)
-        {
-            Console.WriteLine(card.Key + " " + card.Value);
-        }
-
         long totalWinnings = cardBids.Keys.ToList().Zip(cardBids.Values.ToList(), (hand, bid) => cardPoints[hand] * bid)
             .Sum();
 
@@ -42,26 +37,231 @@ class Program
 
     static Dictionary<string, long> AssignRanks(List<string> hands)
     {
-        var sortedHands = hands.OrderByDescending(hand => HandRank(hand))
-                              .ThenByDescending(hand => HandValues(hand))
-                              .ToList();
+        var handPoints = new Dictionary<string, long>();
+
+        foreach (var hand in hands)
+        {
+            handPoints[hand] = HandRank(hand);
+        }
+
+        var fiveKinds = new Dictionary<string, long>();
+        var fourKinds = new Dictionary<string, long>();
+        var fullHouse = new Dictionary<string, long>();
+        var threeKinds = new Dictionary<string, long>();
+        var twoPairs = new Dictionary<string, long>();
+        var onePair = new Dictionary<string, long>();
+        var noPairs = new Dictionary<string, long>();
+
+        foreach (var hand in handPoints)
+        {
+            if (hand.Value == 6000)
+            {
+                fiveKinds[hand.Key] = hand.Value;
+            }
+
+            if (hand.Value == 5000)
+            {
+                fourKinds[hand.Key] = hand.Value;
+            }
+
+            if (hand.Value == 4000)
+            {
+                fullHouse[hand.Key] = hand.Value;
+            }
+
+            if (hand.Value == 3000)
+            {
+                threeKinds[hand.Key] = hand.Value;
+            }
+
+            if (hand.Value == 2000)
+            {
+                twoPairs[hand.Key] = hand.Value;
+            }
+
+            if (hand.Value == 1000)
+            {
+                onePair[hand.Key] = hand.Value;
+            }
+
+            if (hand.Value == 1)
+            {
+                noPairs[hand.Key] = hand.Value;
+            }
+        }
+
+        foreach (var hand in fiveKinds)
+        {
+            foreach (var otherHand in fiveKinds)
+            {
+                if (hand.Key != otherHand.Key)
+                {
+                    for (int i = 0; i < hand.Key.Length; i++)
+                    {
+                        if (hand.Key[i] != otherHand.Key[i])
+                        {
+                            fiveKinds[
+                                CardValue(hand.Key[i]) > CardValue(otherHand.Key[i]) ? hand.Key : otherHand.Key]++;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        foreach (var hand in fourKinds)
+        {
+            foreach (var otherHand in fourKinds)
+            {
+                if (hand.Key != otherHand.Key)
+                {
+                    for (int i = 0; i < hand.Key.Length; i++)
+                    {
+                        if (hand.Key[i] != otherHand.Key[i])
+                        {
+                            fourKinds[
+                                CardValue(hand.Key[i]) > CardValue(otherHand.Key[i]) ? hand.Key : otherHand.Key]++;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        foreach (var hand in fullHouse)
+        {
+            foreach (var otherHand in fullHouse)
+            {
+                if (hand.Key != otherHand.Key)
+                {
+                    for (int i = 0; i < hand.Key.Length; i++)
+                    {
+                        if (hand.Key[i] != otherHand.Key[i])
+                        {
+                            fullHouse[
+                                CardValue(hand.Key[i]) > CardValue(otherHand.Key[i]) ? hand.Key : otherHand.Key]++;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        foreach (var hand in threeKinds)
+        {
+            foreach (var otherHand in threeKinds)
+            {
+                if (hand.Key != otherHand.Key)
+                {
+                    for (int i = 0; i < hand.Key.Length; i++)
+                    {
+                        if (hand.Key[i] != otherHand.Key[i])
+                        {
+                            threeKinds[
+                                CardValue(hand.Key[i]) > CardValue(otherHand.Key[i]) ? hand.Key : otherHand.Key]++;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        foreach (var hand in twoPairs)
+        {
+            foreach (var otherHand in twoPairs)
+            {
+                if (hand.Key != otherHand.Key)
+                {
+                    for (int i = 0; i < hand.Key.Length; i++)
+                    {
+                        if (hand.Key[i] != otherHand.Key[i])
+                        {
+                            twoPairs[
+                                CardValue(hand.Key[i]) > CardValue(otherHand.Key[i]) ? hand.Key : otherHand.Key]++;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        foreach (var hand in onePair)
+        {
+            foreach (var otherHand in onePair)
+            {
+                if (hand.Key != otherHand.Key)
+                {
+                    for (int i = 0; i < hand.Key.Length; i++)
+                    {
+                        if (hand.Key[i] != otherHand.Key[i])
+                        {
+                            onePair[
+                                CardValue(hand.Key[i]) > CardValue(otherHand.Key[i]) ? hand.Key : otherHand.Key]++;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        foreach (var hand in noPairs)
+        {
+            foreach (var otherHand in noPairs)
+            {
+                if (hand.Key != otherHand.Key)
+                {
+                    for (int i = 0; i < hand.Key.Length; i++)
+                    {
+                        if (hand.Key[i] != otherHand.Key[i])
+                        {
+                            noPairs[
+                                CardValue(hand.Key[i]) > CardValue(otherHand.Key[i]) ? hand.Key : otherHand.Key]++;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        var mergedHands = ForEachMethod(fiveKinds, fourKinds, fullHouse, threeKinds, twoPairs, onePair, noPairs);
+
+        var sortedHands = from entry in mergedHands orderby entry.Value ascending select entry;
 
         var ranks = new Dictionary<string, long>();
         long rank = 1;
 
         foreach (var hand in sortedHands)
         {
-            ranks[hand] = rank++;
+            ranks[hand.Key] = rank++;
         }
 
         return ranks;
+    }
+    
+    static Dictionary<TKey, TValue> ForEachMethod<TKey, TValue>(
+        params Dictionary<TKey, TValue>[] dictionaries)
+    {
+        var mergedDictionary = new Dictionary<TKey, TValue>();
+
+        foreach (var dictionary in dictionaries)
+        {
+            foreach (var kvp in dictionary)
+            {
+                if (!mergedDictionary.ContainsKey(kvp.Key))
+                {
+                    mergedDictionary[kvp.Key] = kvp.Value;
+                }
+            }
+        }
+
+        return mergedDictionary;
     }
 
     static long HandRank(string hand)
     {
         if (IsFiveOfAKind(hand))
             return 6000;
-        else if (IsFourOfAKind(hand))
+        if (IsFourOfAKind(hand))
             return 5000;
         else if (IsFullHouse(hand))
             return 4000;
@@ -75,16 +275,16 @@ class Program
             return 1;
     }
 
-    static long HandValues(char card)
+    static int CardValue(char card)
     {
-        Dictionary<char, long> values = new Dictionary<char, long>
+        Dictionary<char, int> values = new Dictionary<char, int>
         {
             { 'A', 14 }, { 'K', 13 }, { 'Q', 12 }, { 'J', 11 }, { 'T', 10 },
             { '9', 9 }, { '8', 8 }, { '7', 7 }, { '6', 6 }, { '5', 5 },
             { '4', 4 }, { '3', 3 }, { '2', 2 }
         };
 
-        return hand.Select(card => values[card]).Max();
+        return values.FirstOrDefault(value => value.Key == card).Value;
     }
 
     static bool IsFiveOfAKind(string hand)
@@ -122,7 +322,3 @@ class Program
         return counts.Count(count => count == 2) == 1;
     }
 }
-
-
-
-
