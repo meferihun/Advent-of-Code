@@ -1,0 +1,14 @@
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\bin\Debug\net8.0\Advent of Code 3.exe
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\bin\Debug\net8.0\Advent of Code 3.deps.json
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\bin\Debug\net8.0\Advent of Code 3.runtimeconfig.json
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\bin\Debug\net8.0\Advent of Code 3.dll
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\bin\Debug\net8.0\Advent of Code 3.pdb
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\Advent of Code 3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\Advent of Code 3.AssemblyInfoInputs.cache
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\Advent of Code 3.AssemblyInfo.cs
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\Advent of Code 3.csproj.CoreCompileInputs.cache
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\Advent of Code 3.dll
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\refint\Advent of Code 3.dll
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\Advent of Code 3.pdb
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\Advent of Code 3.genruntimeconfig.cache
+C:\Users\mefer\Desktop\Advent of Code\Advent of Code 3\Advent of Code 3\obj\Debug\net8.0\ref\Advent of Code 3.dll

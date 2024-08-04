@@ -1,0 +1,15 @@
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\bin\Debug\net8.0\Advent of Code 10.exe
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\bin\Debug\net8.0\Advent of Code 10.deps.json
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\bin\Debug\net8.0\Advent of Code 10.runtimeconfig.json
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\bin\Debug\net8.0\Advent of Code 10.dll
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\bin\Debug\net8.0\Advent of Code 10.pdb
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\Advent of Code 10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\Advent of Code 10.AssemblyInfoInputs.cache
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\Advent of Code 10.AssemblyInfo.cs
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\Advent of Code 10.csproj.CoreCompileInputs.cache
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\Advent of Code 10.sourcelink.json
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\Advent of Code 10.dll
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\refint\Advent of Code 10.dll
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\Advent of Code 10.pdb
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\Advent of Code 10.genruntimeconfig.cache
+C:\Users\mefer\Desktop\Advent-of-Code\2023\Advent of Code 10\Advent of Code 10\obj\Debug\net8.0\ref\Advent of Code 10.dll
